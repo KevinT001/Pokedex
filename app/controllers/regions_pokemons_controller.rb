@@ -1,6 +1,6 @@
-class RegionsPokemonController < ApplicationController
+class RegionsPokemonsController < ApplicationController
   def index  
-    @region = Region.find(params[:id]) 
-    @pokemons = @region.pokemon
+    @regions = Region.find(params[:id]) 
+    @pokemons = @regions.pokemons
   end 
 end 
