@@ -11,5 +11,7 @@ RSpec.describe 'Region index page' do
     expect(page).to have_content(sinoh.name)
     expect(page).to have_content(johto.total_num_in_region)
     expect(page).to have_content(sinoh.total_num_in_region)
+    expect(page).to have_content(johto.caught_all_in_region)
+    expect(page).to have_content(sinoh.caught_all_in_region)
   end
 end

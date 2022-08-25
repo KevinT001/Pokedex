@@ -1,8 +1,8 @@
 <h1> Region Index Page </h1>
 
 <% @regions. each do |region| %>
-<p><%= region.name %> </p>
-<p><%= region.total_num_in_region%></p>
-<p><%= region.caught_all_in_region%></p>
+<h3><%= region.name %> </h3>
+<p>Total number in region:<%= region.total_num_in_region%></p>
+<p>Caught all regional pokemon?: <%= region.caught_all_in_region%></p>
 <% end %>
 

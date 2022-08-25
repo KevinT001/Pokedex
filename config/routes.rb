@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   get '/regions', to: 'regions#index'
   get '/regions/:id', to: 'regions#show'
+
+  get'/pokemons', to: 'pokemons#index'
+  get '/pokemons/:id', to: 'pokemons#show'
 end
