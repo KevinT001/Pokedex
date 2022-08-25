@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2022_08_24_211341) do
     t.integer "pokemon_weight"
     t.boolean "has_evolution"
     t.bigint "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["region_id"], name: "index_pokemons_on_region_id"
   end
 
