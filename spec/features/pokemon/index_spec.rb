@@ -16,4 +16,21 @@ RSpec.describe 'pokemon index' do
     expect(page).to have_content(metapod.has_evolution)
 
   end
+
+  describe 'when I visit any page on the site' do
+    describe 'I see a link at the top of the page that takes me to the pokemon index' do #STORY 8
+      it 'has a link to pokemons index on the top of each page' do
+        visit '/'
+        expect(page).to have_link("Pokemon page")
+        click_on "Pokemon page"
+        expect(current_path).to eq(pokemons_path(@pokemons))
+
+        visit '/regions'
+        expect(page).to have_link("Pokemon page")
+        click_on "Pokemon page"
+        expect(current_path).to eq(pokemons_path(@pokemons))
+      end 
+    end 
+  end 
 end
+
