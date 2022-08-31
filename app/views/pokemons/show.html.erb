@@ -1,0 +1,11 @@
+<%= link_to "Pokemon page", pokemons_path(@pokemons) %>
+<%= link_to "Regions page", regions_path(@regions)%>
+<body>
+<body style="background-color:skyblue">
+<h1>Pokemon Show page</h1>
+
+<h3><%= @pokemons.name %></h3>
+<img src="https://thumbs.gfycat.com/AbandonedFrailEasternnewt-max-1mb.gif" alt="psyduck gif" width="200" height="140">
+<p>Weight: <%= @pokemons.pokemon_weight %></p>
+<p>Has Evolution: <%= @pokemons.has_evolution %></p>
+</body>

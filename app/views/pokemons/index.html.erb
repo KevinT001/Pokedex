@@ -1,0 +1,13 @@
+<%= link_to "Pokemon page", pokemons_path(@pokemon) %>
+<%= link_to "Regions page", regions_path(@region)%>
+<body>
+<body style="background-color:skyblue">
+<h1> Pokemon Index Page </h1>
+
+<% @pokemons.each do |pokemon| %>
+<h3><a href="/pokemons/<%=pokemon.id %>"> 
+<%= pokemon.name %> </h3></a>
+<p>Weight: <%= pokemon.pokemon_weight %></p>
+<p>Has Evolution: <%= pokemon.has_evolution%></p>
+<% end %>
+</body>

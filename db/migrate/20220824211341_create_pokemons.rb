@@ -5,6 +5,7 @@ class CreatePokemons < ActiveRecord::Migration[5.2]
       t.integer :pokemon_weight
       t.boolean :has_evolution
       t.references :region, foreign_key: true
+      t.timestamps
     end
   end
 end

@@ -1,0 +1,14 @@
+<%= link_to "Pokemon page", pokemons_path(@pokemon) %>
+<%= link_to "Regions page", regions_path(@region)%>
+<body>
+<body style="background-color:skyblue">
+<h1>Region Show page</h1>
+
+<p>Region name: <%= @region.name %></p>
+<img src="https://static.wikia.nocookie.net/pokemon/images/f/fe/Johto_HGSS.png" alt="Johto" width="400" height="240">
+
+<p>Caught all in region?: <%= @region.caught_all_in_region %></p>
+<p>Total number in region: <%= @region.total_num_in_region %></p>
+<p>Region Pokemon count: <%= @region.pokemons_count %> </p>
+<%= link_to "Registered Johto Pokemons", "/regions/#{@region.id}/pokemons", method: :get %>
+</body>

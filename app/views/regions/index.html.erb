@@ -1,0 +1,14 @@
+<%= link_to "Pokemon page", pokemons_path(@pokemon) %>
+<%= link_to "Regions page", regions_path(@region)%>
+<body>
+<body style="background-color:skyblue">
+<h1> Region Index Page </h1>
+
+<% @regions. each do |region| %>
+<h3><%= region.name %> </h3>
+<p><%= region.created_at%></p>
+<p>Total number in region:<%= region.total_num_in_region%></p>
+<p>Caught all regional pokemon?: <%= region.caught_all_in_region%></p>
+<% end %>
+</body>
+
