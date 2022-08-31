@@ -11,7 +11,7 @@ RSpec.describe 'Region Show page' do
     expect(page).to have_content(johto.total_num_in_region)
     expect(page).to_not have_content(sinoh.name)
   end
-  describe 'I see a link to take me to that regions pokemon page' do
+  describe 'I see a link to take me to that regions pokemon page' do #STORY 10
       it 'has a link that goes to its pokemonss' do
         johto = Region.create!(name: "Johto", total_num_in_region: 151, caught_all_in_region: false)
         sinoh = Region.create!(name: "Sinnoh", total_num_in_region: 301, caught_all_in_region: true)
